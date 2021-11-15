@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./Context/AuthProvider";
-// import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import Footer from "./pages/Footer/Footer";
 import Home from "./pages/Home/Home/Home";
 import Login from "./pages/Login/Login/Login";
@@ -28,9 +28,9 @@ function App() {
             <Route path="/products">
               <Products></Products>
             </Route>
-            {/* <Route path="/dashboard">
+            <Route path="/dashboard">
               <Dashboard></Dashboard>
-            </Route> */}
+            </Route>
             <PrivateRoute path="/purchase/:id">
               <PurchaseOrder></PurchaseOrder>
             </PrivateRoute>

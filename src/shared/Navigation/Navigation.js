@@ -26,7 +26,7 @@ const Navigation = () => {
             {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            watch's Factory
+            Watch Shop
           </Typography>
           <Link to="/home" style={{ textDecoration: "none" }}>
             <Button style={{ color: "white" }}>Home</Button>
