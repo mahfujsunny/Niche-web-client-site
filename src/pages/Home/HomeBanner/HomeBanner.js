@@ -7,10 +7,11 @@ import "./HomeBanner.css";
 
 const HomeBanner = () => {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} className="banner mt-2">
       <Grid item xs={12} md={8}>
         <img
           style={{ width: "75%", marginTop: "50px" }}
+          className="banner-img"
           src={BannerWatch}
           alt=""
         />

@@ -1,3 +1,12 @@
-body{
+body {
     background-color: rgba(187, 187, 187, 0.789);
+}
+
+.banner {
+    background-color: rgba(89, 250, 247, 0.912);
+    border-radius: 40px 10px 40px 40px;
+}
+
+.banner-img{
+    border-radius: 400px 40px 100px 200px;
 }
