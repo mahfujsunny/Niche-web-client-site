@@ -13,7 +13,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useAuth();
   const handleDelete = (id) => {
-    fetch(`https://quiet-depths-28219.herokuapp.com/cancelOrder/${id}`, {
+    fetch(`http://localhost:5000/cancelOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -32,9 +32,7 @@ const MyOrders = () => {
   };
 
   useEffect(() => {
-    fetch(
-      `https://quiet-depths-28219.herokuapp.com/purchaser?email=${user.email}`
-    )
+    fetch(`http://localhost:5000/purchaser?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

@@ -1,10 +1,10 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+// import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+// import MuiAccordion from "@mui/material/Accordion";
+// import MuiAccordionSummary from "@mui/material/AccordionSummary";
+// import MuiAccordionDetails from "@mui/material/AccordionDetails";
+// import Typography from "@mui/material/Typography";
 import faq from "../../../images/faq.png";
 
 const Faq = () => {

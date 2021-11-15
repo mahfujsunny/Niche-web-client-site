@@ -15,22 +15,22 @@ import HomeBanner from "../HomeBanner/HomeBanner";
 import Reviews from "../Reviews/Reviews";
 
 const Home = () => {
-  const [guitars, setGuitars] = useState([]);
+  const [watchs, setwatchs] = useState([]);
 
   useEffect(() => {
-    fetch("https://quiet-depths-28219.herokuapp.com/guitars")
+    fetch("http://localhost:5000/watchs")
       .then((res) => res.json())
       .then((data) => {
-        setGuitars(data);
+        setwatchs(data);
       });
   }, []);
   return (
     <div>
       <HomeBanner></HomeBanner>
-      <h2>GUITAR'S ARE ON TRENDING</h2>
+      <h2>watch'S ARE ON TRENDING</h2>
       <Container>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          {guitars.slice(0, 6).map((guitar) => (
+          {watchs.slice(0, 6).map((watch) => (
             <Grid item xs={12} md={4}>
               <Box
                 sx={{
@@ -50,19 +50,19 @@ const Home = () => {
                       border: "2px solid gray",
                       marginTop: "10px",
                     }}
-                    src={guitar.img}
+                    src={watch.img}
                     alt=""
                   />
                   <Typography sx={{ fontWeight: "700" }} variant="h6">
-                    {guitar.guitarName}
+                    {watch.watchName}
                   </Typography>
-                  <Typography variant="body1">{guitar.speciality}</Typography>
-                  <Typography variant="h5">$ {guitar.price}</Typography>
+                  <Typography variant="body1">{watch.speciality}</Typography>
+                  <Typography variant="h5">$ {watch.price}</Typography>
                   <Typography variant="body1">
-                    {guitar.desc.slice(0, 180)}
+                    {watch.desc.slice(0, 180)}
                   </Typography>
                   <Link
-                    to={`./purchase/${guitar._id}`}
+                    to={`./purchase/${watch._id}`}
                     style={{ textDecoration: "none" }}
                   >
                     <Button sx={{ mt: 1 }} variant="contained">

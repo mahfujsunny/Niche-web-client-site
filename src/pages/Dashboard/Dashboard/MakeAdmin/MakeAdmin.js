@@ -12,7 +12,7 @@ const MakeAdmin = () => {
 
   const handleformSubmit = (e) => {
     const user = { email };
-    fetch(`https://quiet-depths-28219.herokuapp.com/users/admin`, {
+    fetch(`http://localhost:5000/users/admin`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),

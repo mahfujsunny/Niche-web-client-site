@@ -37,7 +37,7 @@ const PurchaseOrder = () => {
     console.log(newInfo);
   };
   useEffect(() => {
-    fetch("https://quiet-depths-28219.herokuapp.com/guitars")
+    fetch("http://localhost:5000/watchs")
       .then((res) => res.json())
       .then((data) => {
         setSingleProducts(data);
@@ -53,7 +53,7 @@ const PurchaseOrder = () => {
       ...purchaseInfo,
       status: "Pending",
     };
-    fetch("https://quiet-depths-28219.herokuapp.com/purchaser", {
+    fetch("http://localhost:5000/purchaser", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(purchase),
@@ -102,7 +102,7 @@ const PurchaseOrder = () => {
               elevation={3}
             >
               <Typography variant="h5" style={{ fontWeight: "700" }}>
-                Exclusive: {pd.guitarName}
+                Exclusive: {pd.watchName}
               </Typography>
               <Typography variant="h6" style={{ fontWeight: "700" }}>
                 Speciality: {pd.speciality}

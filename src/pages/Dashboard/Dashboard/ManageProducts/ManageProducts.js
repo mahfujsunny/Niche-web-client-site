@@ -6,7 +6,7 @@ const ManageProducts = () => {
 
   const handleDelete = (id) => {
     console.log("clicked", id);
-    fetch(`https://quiet-depths-28219.herokuapp.com/deleteProduct/${id}`, {
+    fetch(`http://localhost:5000/deleteProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -24,7 +24,7 @@ const ManageProducts = () => {
       });
   };
   useEffect(() => {
-    fetch("https://quiet-depths-28219.herokuapp.com/guitars")
+    fetch("http://localhost:5000/watchs")
       .then((res) => res.json())
       .then((data) => {
         setMyProducts(data);
@@ -40,7 +40,7 @@ const ManageProducts = () => {
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h5" sx={{ fontWeight: 600, color: "blue" }}>
-              {myProduct.guitarName}
+              {myProduct.watchName}
             </Typography>
             <br />
             <Typography sx={{ fontWeight: 600, color: "purple" }}>

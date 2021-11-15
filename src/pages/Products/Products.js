@@ -7,7 +7,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://quiet-depths-28219.herokuapp.com/guitars")
+    fetch("http://localhost:5000/watchs")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -41,7 +41,7 @@ const Products = () => {
                     alt=""
                   />
                   <Typography sx={{ fontWeight: "700" }} variant="h5">
-                    {product.guitarName}
+                    {product.watchName}
                   </Typography>
                   <Typography variant="h6">{product.speciality}</Typography>
                   <Typography variant="h5">$ {product.price}</Typography>

@@ -20,7 +20,7 @@ const AddProducts = () => {
     const products = {
       ...newProducts,
     };
-    fetch("https://quiet-depths-28219.herokuapp.com/guitars", {
+    fetch("http://localhost:5000/watchs", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(products),
@@ -52,15 +52,15 @@ const AddProducts = () => {
             type="url"
             name="img"
             onBlur={handleOnBlur}
-            defaultValue="Guitar image?"
+            defaultValue="watch image?"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
             required
             id="outlined-required"
-            name="guitarName"
+            name="watchName"
             onBlur={handleOnBlur}
-            defaultValue="Guitar Name?"
+            defaultValue="watch Name?"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -68,7 +68,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="speciality"
             onBlur={handleOnBlur}
-            defaultValue="Guitar Speciality?"
+            defaultValue="watch Speciality?"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -76,7 +76,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="price"
             onBlur={handleOnBlur}
-            defaultValue="Guitar price"
+            defaultValue="watch price"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -84,7 +84,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="desc"
             onBlur={handleOnBlur}
-            defaultValue="Guitar Description?"
+            defaultValue="watch Description?"
           />
 
           <Button type="submit" variant="contained">

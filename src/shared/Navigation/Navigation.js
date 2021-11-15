@@ -5,10 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/MenuIcon";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import { Container } from "@mui/material";
+// import { Container } from "@mui/material";
 
 const Navigation = () => {
   const { user, logout } = useAuth();
@@ -23,15 +23,15 @@ const Navigation = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Guitar's Factory
+            watch's Factory
           </Typography>
           <Link to="/home" style={{ textDecoration: "none" }}>
             <Button style={{ color: "white" }}>Home</Button>
           </Link>
-          {/* <Link to='/products' style={{ textDecoration: 'none' }}><Button style={{ color: 'white' }}>Explore Guitar's</Button></Link> */}
+          {/* <Link to='/products' style={{ textDecoration: 'none' }}><Button style={{ color: 'white' }}>Explore watch's</Button></Link> */}
           {user.email ? (
             <div
               style={{

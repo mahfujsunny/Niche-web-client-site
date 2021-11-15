@@ -1,4 +1,4 @@
-import { ReviewsSharp, ReviewsTwoTone } from "@mui/icons-material";
+// import { ReviewsSharp, ReviewsTwoTone } from "@mui/icons-material";
 import { Card, Grid, Paper, Rating, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
@@ -6,7 +6,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://quiet-depths-28219.herokuapp.com/reviews")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

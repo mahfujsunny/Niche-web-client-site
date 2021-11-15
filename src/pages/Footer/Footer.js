@@ -16,7 +16,7 @@ const Footer = () => {
                     sx={{ fontWeight: 600, color: "red" }}
                     variant="h4"
                   >
-                    Guitar's Factory
+                    Watch Shop
                   </Typography>
                   <Typography
                     sx={{ fontWeight: 300, marginTop: "1rem", color: "white" }}
@@ -35,7 +35,7 @@ const Footer = () => {
                   About Company
                 </Typography>
                 <p className="text-white">
-                  We are distributing the best guitars in the country
+                  We are distributing the best watchs in the country
                 </p>
                 <Link
                   style={{
