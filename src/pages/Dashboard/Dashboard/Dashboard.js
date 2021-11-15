@@ -76,7 +76,7 @@ function Dashboard(props) {
     <>
       <Box sx={{ display: "flex" }} className="DB-BG">
         <CssBaseline />
-        <AppBar position="sticky">
+        <AppBar position="fixed">
           <Toolbar>
             <IconButton
               color="inherit"
