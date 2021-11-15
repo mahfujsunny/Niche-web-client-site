@@ -17,13 +17,13 @@ const AllOrders = () => {
   const [status, setStatus] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://powerful-caverns-66360.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/cancelOrder/${id}`, {
+    fetch(`https://powerful-caverns-66360.herokuapp.com/cancelOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -46,7 +46,7 @@ const AllOrders = () => {
 
     setStatus(newStatus);
     console.log(status);
-    fetch(`http://localhost:5000/statusUpdate/${id}`, {
+    fetch(`https://powerful-caverns-66360.herokuapp.com/statusUpdate/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(status),
@@ -61,7 +61,7 @@ const AllOrders = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={3}>
-        <img style={{ width: "100%", marginTop: "10rem" }} src={admin} alt="" />
+        <img style={{ width: "50%", marginTop: "10rem" }} src={admin} alt="" />
       </Grid>
       <Grid item xs={12} md={9}>
         <h1 className="mb-5">Customers Orders</h1>

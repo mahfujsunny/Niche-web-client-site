@@ -20,7 +20,7 @@ const AddProducts = () => {
     const products = {
       ...newProducts,
     };
-    fetch("http://localhost:5000/watchs", {
+    fetch("https://powerful-caverns-66360.herokuapp.com/watchs", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(products),
@@ -52,7 +52,7 @@ const AddProducts = () => {
             type="url"
             name="img"
             onBlur={handleOnBlur}
-            defaultValue="watch image?"
+            placeholder="Image Url"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -60,7 +60,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="watchName"
             onBlur={handleOnBlur}
-            defaultValue="watch Name?"
+            placeholder="Name Of Product"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -68,7 +68,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="speciality"
             onBlur={handleOnBlur}
-            defaultValue="watch Speciality?"
+            placeholder="Water Resistence ? Un-Breakable? less changable?"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -76,7 +76,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="price"
             onBlur={handleOnBlur}
-            defaultValue="watch price"
+            placeholder="Watch Price"
           />
           <TextField
             sx={{ width: "90%", m: 1 }}
@@ -84,7 +84,7 @@ const AddProducts = () => {
             id="outlined-required"
             name="desc"
             onBlur={handleOnBlur}
-            defaultValue="watch Description?"
+            placeholder="Add Description"
           />
 
           <Button type="submit" variant="contained">

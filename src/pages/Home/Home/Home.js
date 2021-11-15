@@ -1,15 +1,7 @@
-import {
-  Button,
-  Card,
-  Container,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Button, Card, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Navigation from "../../../shared/Navigation/Navigation";
 import Faq from "../Faq/Faq";
 import HomeBanner from "../HomeBanner/HomeBanner";
 import Reviews from "../Reviews/Reviews";
@@ -18,7 +10,7 @@ const Home = () => {
   const [watchs, setwatchs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/watchs")
+    fetch("https://powerful-caverns-66360.herokuapp.com/watchs")
       .then((res) => res.json())
       .then((data) => {
         setwatchs(data);
@@ -27,7 +19,7 @@ const Home = () => {
   return (
     <div>
       <HomeBanner></HomeBanner>
-      <h2>watch'S ARE ON TRENDING</h2>
+      <h2 className="m-3 p-3 border-bottom">WATCH GALLERY____</h2>
       <Container>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           {watchs.slice(0, 6).map((watch) => (
@@ -37,7 +29,7 @@ const Home = () => {
                   display: "flex",
                   flexWrap: "wrap",
                   "& > :not(style)": {
-                    m: 5,
+                    m: 1,
                     maxWidth: 400,
                     height: 550,
                   },
@@ -59,7 +51,7 @@ const Home = () => {
                   <Typography variant="body1">{watch.speciality}</Typography>
                   <Typography variant="h5">$ {watch.price}</Typography>
                   <Typography variant="body1">
-                    {watch.desc.slice(0, 180)}
+                    {watch.desc.slice(0, 140)}
                   </Typography>
                   <Link
                     to={`./purchase/${watch._id}`}

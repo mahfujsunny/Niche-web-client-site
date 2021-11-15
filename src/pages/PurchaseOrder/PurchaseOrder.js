@@ -37,7 +37,7 @@ const PurchaseOrder = () => {
     console.log(newInfo);
   };
   useEffect(() => {
-    fetch("http://localhost:5000/watchs")
+    fetch("https://powerful-caverns-66360.herokuapp.com/watchs")
       .then((res) => res.json())
       .then((data) => {
         setSingleProducts(data);
@@ -53,7 +53,7 @@ const PurchaseOrder = () => {
       ...purchaseInfo,
       status: "Pending",
     };
-    fetch("http://localhost:5000/purchaser", {
+    fetch("https://powerful-caverns-66360.herokuapp.com/purchaser", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(purchase),

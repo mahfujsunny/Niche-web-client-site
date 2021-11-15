@@ -31,7 +31,6 @@ const Navigation = () => {
           <Link to="/home" style={{ textDecoration: "none" }}>
             <Button style={{ color: "white" }}>Home</Button>
           </Link>
-          {/* <Link to='/products' style={{ textDecoration: 'none' }}><Button style={{ color: 'white' }}>Explore watch's</Button></Link> */}
           {user.email ? (
             <div
               style={{

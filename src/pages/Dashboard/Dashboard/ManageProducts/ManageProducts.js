@@ -6,7 +6,7 @@ const ManageProducts = () => {
 
   const handleDelete = (id) => {
     console.log("clicked", id);
-    fetch(`http://localhost:5000/deleteProduct/${id}`, {
+    fetch(`https://powerful-caverns-66360.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -24,7 +24,7 @@ const ManageProducts = () => {
       });
   };
   useEffect(() => {
-    fetch("http://localhost:5000/watchs")
+    fetch("https://powerful-caverns-66360.herokuapp.com/watchs")
       .then((res) => res.json())
       .then((data) => {
         setMyProducts(data);

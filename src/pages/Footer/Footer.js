@@ -1,11 +1,13 @@
-import { AppBar, Container, Toolbar, Typography } from "@mui/material";
-import { fontSize } from "@mui/system";
+import { Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer style={{ marginTop: " 7rem" }} class="container-fluid bg-dark py-5">
+    <footer
+      style={{ marginTop: " 0.5rem" }}
+      class="container-fluid bg-dark py-5"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -13,7 +15,7 @@ const Footer = () => {
               <div class="col-md-6 ">
                 <div class="logo-part">
                   <Typography
-                    sx={{ fontWeight: 600, color: "red" }}
+                    sx={{ fontWeight: 600, color: "aqua" }}
                     variant="h4"
                   >
                     Watch Shop
@@ -40,7 +42,7 @@ const Footer = () => {
                 <Link
                   style={{
                     textDecoration: "none",
-                    color: "green",
+                    color: "aqua",
                     fontSize: 20,
                   }}
                   to="/"
@@ -53,7 +55,7 @@ const Footer = () => {
                 <Link
                   style={{
                     textDecoration: "none",
-                    color: "green",
+                    color: "aqua",
                     fontSize: 20,
                   }}
                   to="/"
@@ -77,7 +79,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -92,7 +94,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -107,7 +109,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -122,7 +124,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -137,7 +139,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -156,7 +158,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -171,7 +173,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -186,7 +188,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 15,
                           }}
                           to="/"
@@ -201,7 +203,7 @@ const Footer = () => {
                         <Link
                           style={{
                             textDecoration: "none",
-                            color: "green",
+                            color: "aqua",
                             fontSize: 18,
                           }}
                           to="/"
@@ -233,9 +235,6 @@ const Footer = () => {
                   />
                   <input type="button" value="Go" />
                 </form>
-                <p className="text-white">
-                  That's technology limitation of LCD monitors
-                </p>
               </div>
             </div>
           </div>

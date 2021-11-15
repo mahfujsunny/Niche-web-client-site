@@ -29,7 +29,7 @@ const HomeBanner = () => {
           </h2>
           <h5
             style={{
-              color: "gray",
+              color: "black",
               fontWeight: "400",
               padding: "10px",
               textAlign: "left",

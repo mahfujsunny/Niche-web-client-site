@@ -4,7 +4,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
@@ -27,6 +26,7 @@ import MakeAdmin from "./MakeAdmin/MakeAdmin";
 import ManageProducts from "./ManageProducts/ManageProducts";
 import AddReview from "./AddReview/AddReview";
 import AdminRoute from "../../PrivateRoute/AdminRoute/AdminRoute";
+import "./Dashboard.css";
 
 const drawerWidth = 240;
 
@@ -74,16 +74,9 @@ function Dashboard(props) {
 
   return (
     <>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex" }} className="DB-BG">
         <CssBaseline />
-        <AppBar
-          position="fixed"
-          sx={
-            {
-              // ml: { sm: ${drawerWidth}px },
-            }
-          }
-        >
+        <AppBar position="sticky">
           <Toolbar>
             <IconButton
               color="inherit"
@@ -107,7 +100,7 @@ function Dashboard(props) {
               <Box>
                 <Link to={`${url}/payment`} style={{ textDecoration: "none" }}>
                   <Button style={{ color: "white", fontSize: 13 }}>
-                    PayMent
+                    Payment
                   </Button>
                 </Link>
                 <Link to={path} style={{ textDecoration: "none" }}>
@@ -171,10 +164,7 @@ function Dashboard(props) {
           component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
-        >
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-          {/*  */}
-        </Box>
+        ></Box>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <Toolbar />
           <Route exact path={`${url}/payment`}>
@@ -189,9 +179,9 @@ function Dashboard(props) {
           <Route path={`${url}/addproducts`}>
             <AddProducts></AddProducts>
           </Route>
-          <Route path={`${url}/makeAdmin`}>
+          <AdminRoute path={`${url}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
-          </Route>
+          </AdminRoute>
           {!admin ? (
             <Route exact path={path}>
               <MyOrders></MyOrders>

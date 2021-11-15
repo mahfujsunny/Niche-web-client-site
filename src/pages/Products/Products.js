@@ -1,4 +1,5 @@
 import { Button, Container, Grid, Paper, Typography } from "@mui/material";
+import { blue } from "@mui/material/colors";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -7,7 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/watchs")
+    fetch("https://powerful-caverns-66360.herokuapp.com/watchs")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -26,7 +27,6 @@ const Products = () => {
                   "& > :not(style)": {
                     m: 5,
                     width: 500,
-                    height: 570,
                   },
                 }}
               >
